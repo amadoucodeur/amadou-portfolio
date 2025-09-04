@@ -88,7 +88,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden pt-20">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <title>
         Amadou Coulibaly (amcodeur) - Développeur Fullstack & Expert
         Transformation Digitale
