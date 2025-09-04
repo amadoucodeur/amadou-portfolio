@@ -41,6 +41,12 @@ import {
   Globe,
   Briefcase,
   ChevronDown,
+  Pencil,
+  WandSparkles,
+  Bus,
+  DollarSignIcon,
+  CircleDollarSign,
+  Search,
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
@@ -299,9 +305,9 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent className="space-y-3 relative z-10">
                 {[
-                  "Next.js 14 + TypeScript",
-                  "React 18 + Tailwind CSS",
-                  "Node.js + Express",
+                  "Next.js 15 + TypeScript",
+                  "React 19 + Tailwind CSS",
+                  "Node.js + Edge Functions",
                   "PostgreSQL + Supabase",
                 ].map((tech, index) => (
                   <div key={index} className="bg-zinc-800/20 rounded-lg p-3">
@@ -327,7 +333,7 @@ export default function Portfolio() {
               <CardContent className="space-y-3 relative z-10">
                 {[
                   "AWS Certified",
-                  "Vercel + Docker",
+                  "Vercel + Supabase",
                   "CI/CD GitHub Actions",
                   "Redis + Monitoring",
                 ].map((tech, index) => (
@@ -354,7 +360,7 @@ export default function Portfolio() {
               <CardContent className="space-y-3 relative z-10">
                 {[
                   "Mobile Money APIs",
-                  "Wave + Stripe",
+                  "PWA",
                   "React Native",
                   "Payment Security",
                 ].map((tech, index) => (
@@ -375,10 +381,10 @@ export default function Portfolio() {
             <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
               {[
                 { name: "Git/GitHub", icon: GitBranch, color: "orange" },
-                { name: "Docker", icon: Layers, color: "blue" },
                 { name: "CI/CD", icon: Workflow, color: "green" },
-                { name: "Figma", icon: Cpu, color: "purple" },
                 { name: "Vercel", icon: Zap, color: "cyan" },
+                { name: "ShadCN", icon: WandSparkles, color: "purple" },
+                { name: "Supabase", icon: Database, color: "yellow" },
                 { name: "Agile/Scrum", icon: Target, color: "pink" },
               ].map((tool, index) => (
                 <div
@@ -496,7 +502,7 @@ export default function Portfolio() {
                   <div className="bg-zinc-800/30 rounded-xl p-4 text-center">
                     <Users className="w-6 h-6 text-purple-400 mx-auto mb-2" />
                     <div className="text-2xl font-bold text-purple-400">
-                      6→3
+                      11→4
                     </div>
                     <div className="text-xs text-zinc-400">
                       Équipe comptable
@@ -515,7 +521,7 @@ export default function Portfolio() {
                 <div className="space-y-3 text-sm text-zinc-300">
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-purple-400" />
-                    <span>Réduction 50% temps de traitement</span>
+                    <span>Élimination des détournements financiers</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-purple-400" />
@@ -539,8 +545,8 @@ export default function Portfolio() {
               {[
                 {
                   icon: DollarSign,
-                  value: "15M+ FCFA",
-                  label: "Revenus mensuels automatisés",
+                  value: "100M+ FCFA",
+                  label: "Collecte par solutions PropTech",
                   color: "cyan",
                 },
                 {
@@ -551,14 +557,14 @@ export default function Portfolio() {
                 },
                 {
                   icon: Users,
-                  value: "50%",
+                  value: "+55%",
                   label: "Optimisation équipes",
                   color: "purple",
                 },
                 {
                   icon: Zap,
-                  value: "< 300ms",
-                  label: "Performance API moyenne",
+                  value: "-98%",
+                  label: "Frais de transaction mobile money",
                   color: "yellow",
                 },
               ].map((metric, index) => (
@@ -645,11 +651,11 @@ export default function Portfolio() {
                 <CardContent className="space-y-4">
                   {[
                     {
-                      tech: "Next.js 14 + TypeScript",
+                      tech: "Next.js 15 + TypeScript",
                       desc: "Framework fullstack moderne",
                     },
                     {
-                      tech: "Node.js + PostgreSQL",
+                      tech: "Node.js + PostgreSQL + Edge Functions",
                       desc: "Backend robuste et performant",
                     },
                     {
@@ -657,8 +663,12 @@ export default function Portfolio() {
                       desc: "Intégrations fintech africaines",
                     },
                     {
-                      tech: "AWS + Vercel",
+                      tech: "AWS + Vercel + Supabase",
                       desc: "Infrastructure cloud scalable",
+                    },
+                    {
+                      tech: "React Native + Expo + PWA",
+                      desc: "Application mobile",
                     },
                   ].map((item, index) => (
                     <div
@@ -743,7 +753,7 @@ export default function Portfolio() {
                         icon: Users,
                       },
                       {
-                        value: "6→3",
+                        value: "11→4",
                         label: "Équipe optimisée",
                         color: "yellow",
                         icon: Briefcase,
@@ -771,9 +781,18 @@ export default function Portfolio() {
                   </div>
 
                   <div className="flex gap-4">
-                    <Button className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white">
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      Voir le projet
+                    <Button
+                      className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white"
+                      asChild
+                    >
+                      <a
+                        href="https://trabad.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4 mr-2" />
+                        Voir le projet
+                      </a>
                     </Button>
                     <Button
                       variant="outline"
@@ -794,17 +813,17 @@ export default function Portfolio() {
                     {[
                       {
                         icon: Layers,
-                        tech: "Frontend: Next.js 14 + TypeScript + Tailwind",
+                        tech: "Frontend: Next.js 15 + TypeScript + Tailwind",
                         color: "cyan",
                       },
                       {
                         icon: Server,
-                        tech: "Backend: Node.js + Express + PostgreSQL",
+                        tech: "Backend: Node.js + PostgreSQL + Edge Functions",
                         color: "emerald",
                       },
                       {
                         icon: Smartphone,
-                        tech: "Mobile: React Native + Expo",
+                        tech: "Mobile: React Native + Expo + PWA",
                         color: "purple",
                       },
                       {
@@ -814,8 +833,8 @@ export default function Portfolio() {
                       },
                       {
                         icon: Cloud,
-                        tech: "Déploiement: Vercel + AWS RDS",
-                        color: "blue",
+                        tech: "Déploiement: Vercel + GitHub Actions",
+                        color: "yellow",
                       },
                     ].map((item, index) => (
                       <div
@@ -834,11 +853,12 @@ export default function Portfolio() {
                     {[
                       "Next.js",
                       "PostgreSQL",
-                      "Wave API",
+                      "Mobile Money APIs",
                       "React Native",
                       "TypeScript",
                       "Vercel",
-                      "AWS",
+                      "GitHub Actions",
+                      "Supabase",
                     ].map((tech) => (
                       <Badge
                         key={tech}
@@ -855,6 +875,92 @@ export default function Portfolio() {
 
             {/* Other Projects Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Scanbus MVP en cours */}
+              <Card className="group bg-gradient-to-br from-zinc-800/20 to-zinc-900/20 border-zinc-700/50 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <CardHeader className="relative z-10">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-gradient-to-r from-orange-500 to-teal-500 rounded-xl group-hover:scale-110 transition-transform">
+                      <Bus className="w-6 h-6 text-white" />
+                    </div>
+                    <Badge className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-400 border-emerald-500/30">
+                      MVP en cours
+                    </Badge>
+                    <Badge className="bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-400 border-emerald-500/30">
+                      Transports
+                    </Badge>
+                  </div>
+                  <CardTitle className="text-2xl text-white group-hover:text-orange-400 transition-colors">
+                    Scanbus
+                  </CardTitle>
+                  <CardDescription className="text-zinc-400 text-base leading-relaxed">
+                    Plateforme de billetterie digitale intelligente pour le
+                    transport Ivoirien
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="relative z-10">
+                  <div className="space-y-4 mb-6">
+                    {[
+                      {
+                        icon: CircleDollarSign,
+                        text: "Intégration avec les APIs des mobiles money)",
+                        color: "cyan",
+                      },
+                      {
+                        icon: Smartphone,
+                        text: "PWA mobile-first responsive",
+                        color: "emerald",
+                      },
+                      {
+                        icon: Search,
+                        text: "Algorithmes de recherche et de recommandation optimisés",
+                        color: "purple",
+                      },
+                    ].map((feature, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center gap-3 text-sm bg-zinc-800/30 rounded-lg p-3"
+                      >
+                        <feature.icon
+                          className={`w-4 h-4 text-${feature.color}-400`}
+                        />
+                        <span className="text-zinc-300">{feature.text}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {[
+                      "Next.js",
+                      "React",
+                      "Node.js",
+                      "PostgreSQL",
+                      "Edge Functions",
+                    ].map((tech) => (
+                      <Badge
+                        key={tech}
+                        variant="secondary"
+                        className="bg-zinc-700/50 text-zinc-300 text-xs"
+                      >
+                        {tech}
+                      </Badge>
+                    ))}
+                  </div>
+                  <Button
+                    className="w-full bg-gradient-to-r from-orange-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600"
+                    asChild
+                  >
+                    <a
+                      href="https://scanbus.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Voir la Réalisation de Scanbus
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+
               {/* Nexusia */}
               <Card className="group bg-gradient-to-br from-zinc-800/20 to-zinc-900/20 border-zinc-700/50 hover:border-purple-500/50 transition-all duration-500 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -889,8 +995,8 @@ export default function Portfolio() {
                         color: "purple",
                       },
                       {
-                        icon: Shield,
-                        text: "Authentification JWT sécurisée",
+                        icon: Brain,
+                        text: "Intégration MistralAI",
                         color: "emerald",
                       },
                     ].map((feature, index) => (
@@ -906,24 +1012,34 @@ export default function Portfolio() {
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-2 mb-6">
-                    {["MistralAI", "Node.js", "Docker", "Redis"].map((tech) => (
-                      <Badge
-                        key={tech}
-                        variant="secondary"
-                        className="bg-zinc-700/50 text-zinc-300 text-xs"
-                      >
-                        {tech}
-                      </Badge>
-                    ))}
+                    {["IA", "MistralAI", "Nextjs.js", "Vercel", "ShadCN"].map(
+                      (tech) => (
+                        <Badge
+                          key={tech}
+                          variant="secondary"
+                          className="bg-zinc-700/50 text-zinc-300 text-xs"
+                        >
+                          {tech}
+                        </Badge>
+                      )
+                    )}
                   </div>
-                  <Button className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Découvrir Nexusia
+                  <Button
+                    className="w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
+                    asChild
+                  >
+                    <a
+                      href="https://nexusia.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Découvrir Nexusia
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
 
-              {/* Mikatch Transformation */}
               <Card className="group bg-gradient-to-br from-zinc-800/20 to-zinc-900/20 border-zinc-700/50 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardHeader className="relative z-10">
@@ -1076,28 +1192,21 @@ export default function Portfolio() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              className="border-2 border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border-emerald-500 px-10 py-4 text-lg bg-transparent rounded-xl transition-all duration-300"
-              asChild
-            >
-              <a
-                href="https://amcodeur.vercel.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Globe className="w-6 h-6 mr-3" />
-                Portfolio complet
-              </a>
-            </Button>
+
             <Button
               variant="outline"
               size="lg"
               className="border-2 border-zinc-600 text-zinc-300 hover:bg-zinc-800 hover:text-white hover:border-purple-500 px-10 py-4 text-lg bg-transparent rounded-xl transition-all duration-300"
+              asChild
             >
-              <Download className="w-6 h-6 mr-3" />
-              Télécharger CV
+              <a
+                href="/amadou-cv-05.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="w-6 h-6 mr-3" />
+                Télécharger CV
+              </a>
             </Button>
           </div>
 
